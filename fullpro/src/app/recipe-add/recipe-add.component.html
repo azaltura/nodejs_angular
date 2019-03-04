@@ -1,0 +1,13 @@
+<form #myForm="ngForm">
+  <div>
+    <label>Name:
+      <input [(ngModel)]="recipe.name" placeholder="name" name="name" #name>
+    </label>
+    <label>instructions:
+        <input [(ngModel)]="recipe.instr" placeholder="instructions" name="instructions">
+    </label>
+  </div>
+  <div>
+    <button (click)="addRecipe(name, instr)">Register</button>  
+  </div>
+</form>

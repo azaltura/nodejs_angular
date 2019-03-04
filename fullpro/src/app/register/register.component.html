@@ -1,0 +1,16 @@
+<form #myForm="ngForm">
+  <div>
+    <label>First Name:
+      <input [(ngModel)]="contact.name" placeholder="name" name="name" #name>
+    </label>
+    <label>Email:
+        <input [(ngModel)]="contact.email" placeholder="email" name="email" #email>
+    </label>
+  </div>
+    <label>Phone:
+        <input [(ngModel)]="contact.phone" placeholder="phone" name="phone" #phone>
+    </label>
+  <div>
+    <button (click)="registerUser(name, email, phone)">Register</button>  
+  </div>
+</form>
