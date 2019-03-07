@@ -70,6 +70,34 @@ app.get('/recipe', function (req, res) {
 
 })
 
+app.post('/save', function (req, res) {
+    let data= req.body;
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'contact'
+
+    });
+
+    connection.connect();
+
+    connection.query('INSERT INTO `contacts` SET ?',data, 
+    function (err, results, fields) {
+                if (err) { 
+            console.log(err.sql)
+            throw err;
+        }
+        
+        connection.end();
+        console.log(results);
+        res.send(JSON.stringify(results));
+
+    });
+
+
+})
+
 
 
 

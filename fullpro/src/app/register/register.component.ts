@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   }
   registerUser() {
     this.registerService.contact(this.contact).subscribe(contactRes => {
-      this.contact = contactRes;
+      
     });
 
   }
