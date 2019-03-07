@@ -1,13 +1,11 @@
-<form #myForm="ngForm">
-  <div>
-    <label>Name:
-      <input [(ngModel)]="recipe.name" placeholder="name" name="name" #name>
-    </label>
-    <label>instructions:
-        <input [(ngModel)]="recipe.instr" placeholder="instructions" name="instructions">
-    </label>
+<form  #myForm="ngForm">
+  <div class="form-group">
+    <label>Recipe Name</label>
+    <input name='recipeName' [(ngModel)]="recipe.name" type="text" class="form-control" placeholder="Enter Recipe Name">
   </div>
-  <div>
-    <button (click)="addRecipe(name, instr)">Register</button>  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Instructions</label>
+    <textarea name='instr' [(ngModel)]="recipe.instr" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Recipe Instructions"></textarea>
   </div>
+  <button (click)="addRecipe()" type="submit" class="btn btn-primary">Register</button>
 </form>

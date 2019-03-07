@@ -21,7 +21,7 @@ export class RecipeAddComponent implements OnInit {
 
   addRecipe() {
     this.recipeService.post(this.recipe).subscribe(recipeRes => {
-      this.recipe = recipeRes;
+      console.log(recipeRes);
     });
 
   }

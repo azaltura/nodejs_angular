@@ -22,6 +22,7 @@ export class RecipeComponent implements OnInit {
 
     this.recipeService.get().subscribe(recipeData => {
       this.recipes = <RecipeModel[]>recipeData;
+
     });
   }
 
